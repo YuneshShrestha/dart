@@ -4,38 +4,34 @@
 // class bata object bannae process lai instantiation bhanxa
 // Polymorphism and abstract
 class Person {
-  // Access modifier / Encapsulation (Private & Public)
+  // Access modifier / Encapsulation (Private(when it can only be accessed inside) & Public)
   String? _name;
   // Parameter Constructor (Object banauda kehri nai kehi value liyaera banos bhnaera)
   // Person({this.name, this.age, this.address, this.gender});
 }
 
 class Student extends Person {
-  String? _faculty;
+  double? _gpa;
   // Setter
   setStudentName(String data) {
     _name = data;
   }
 
-  setFaculty(String data) {
-    _faculty = data;
+  setGpa(double data) {
+    if (data < 0) {
+      throw Exception("Gpa can't be negative");
+    }
+    _gpa = data;
   }
 
-  // Getter
+  // Getter -- to show provate variable
   String get name {
     // execlamatory is permissing for null
     return _name!;
   }
 
-  String get faculty {
+  double get gpa {
     // execlamatory is permissing for null
-    return _faculty!;
+    return _gpa!;
   }
-}
-
-void main() {
-  // Creating object (Process is instantiation)
-  Student s = new Student();
-  s.setStudentName("Yunesh");
-  print(s.name);
 }
