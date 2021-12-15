@@ -1,15 +1,29 @@
+// Class is blueprint (like ghar ko naksa) of object
+// Object is everthing you see
+// Object has properties(variables) and methods()
+// class bata object bannae process lai instantiation bhanxa
+// Polymorphism and abstract
+class Person {
+  String? name;
+  int? age;
+  String? address;
+  String? gender;
+}
+
 void main() {
-  //question mark is Promising string that it want be null
-  Map<String, dynamic> name = {
-    "user": "yunesh",
-    "age": 19,
-    "company": [
-      {"name": "Code-IT", "phone": "025-554678"},
-      {"name": "Online Computers", "phone": "025-554678"},
-    ]
-  };
-  // Set return group of distinct contents
-  name['company'].map((e) => print(e['name'])).toList();
-  // Set return group of same contents
-  // name.map((e) => print(e['age'])).toList();
+  // Creating object (Process)
+  Person person = Person();
+  Person person2 = Person();
+
+  person.name = "Yunesh";
+  person.age = 19;
+  person.address = "Dharan";
+  person.gender = "M";
+
+  person2.name = "Ram";
+  person2.age = 16;
+  person2.address = "Dharan";
+  person2.gender = "M";
+
+  print(person2.name);
 }
