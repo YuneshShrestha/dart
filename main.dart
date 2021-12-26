@@ -1,4 +1,4 @@
-import 'index.dart';
+import 'class_constructor_encapsulation.dart';
 
 void main() {
   // Creating object (Process is instantiation)
