@@ -9,9 +9,14 @@ class EdgeInsets {
     right = 10.0;
   }
 }
+// You can access static properties without instantiation like enum but enum only takes numbers
+class Color {
+  static String black = '0xff000';
+}
 
 void main() {
   var edgeInsets = EdgeInsets.all(2.0);
   print(edgeInsets.top);
   print(edgeInsets.left);
+  var black = Color.black;
 }
